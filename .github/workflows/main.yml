@@ -21,9 +21,10 @@ jobs:
         cmd.exe /c "python editable_IDA_copies.py"
 
     - name: Verify file creation
+      shell: pwsh
       run: |
-        if exist hello_world.xlsx (
-          echo "File created successfully."
-        ) else (
-          echo "File not created."
-        )
+        if (Test-Path "hello_world.xlsx") {
+          Write-Output "File created successfully."
+        } else {
+          Write-Output "File not created."
+        }
