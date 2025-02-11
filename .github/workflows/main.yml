@@ -1,0 +1,16 @@
+name: Run Python Script
+
+on:
+  workflow_dispatch:  # Allows manual and API-triggered runs
+
+jobs:
+  run-script:
+    runs-on: windows-latest  # Use a Windows runner
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Run Python script
+      run: |
+        cmd.exe /c editable_IDA_copies.py"  
