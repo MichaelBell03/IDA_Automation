@@ -13,4 +13,4 @@ jobs:
 
     - name: Run Python script
       run: |
-        cmd.exe /c "editable_IDA_copies.py"  
+        cmd.exe /c "python editable_IDA_copies.py"  
