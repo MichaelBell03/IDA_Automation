@@ -23,7 +23,7 @@ jobs:
     - name: Verify file creation
       shell: pwsh
       run: |
-        if (Test-Path "hello_world.xlsx") {
+        if (Test-Path "Attachments/IDA Automation Test Folder/hello_world.xlsx") {
           Write-Output "File created successfully."
         } else {
           Write-Output "File not created."
